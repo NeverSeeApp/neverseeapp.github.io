@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NeverSee</title>
+  <meta name="description" content="Official public information for the NeverSee browser extension.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --text: #1f2937;
+      --muted: #4b5563;
+      --bg: #ffffff;
+      --card: #f9fafb;
+      --border: #e5e7eb;
+      --link: #2563eb;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #f3f4f6;
+        --muted: #d1d5db;
+        --bg: #111827;
+        --card: #1f2937;
+        --border: #374151;
+        --link: #93c5fd;
+      }
+    }
+    body {
+      margin: 0 auto;
+      max-width: 40rem;
+      padding: 3rem 1.25rem;
+      font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+    h1 { margin-top: 0; line-height: 1.2; }
+    .lead { color: var(--muted); font-size: 1.05rem; }
+    .card {
+      margin-top: 2rem;
+      padding: 1.25rem 1.35rem;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--card);
+    }
+    ul { padding-left: 1.2rem; }
+    a { color: var(--link); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NeverSee</h1>
+    <p class="lead">
+      A browser extension that hides links and listings you choose not to see again.
+    </p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Privacy Policy</h2>
+      <p>
+        Read how NeverSee handles data on your device, including local storage,
+        page processing, and your options to delete or back up data.
+      </p>
+      <p>
+        <a href="privacy-policy.html">Privacy Policy (English / 日本語)</a>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Support</h2>
+      <p>
+        For privacy or support questions:
+        <a href="mailto:neversee.extension@gmail.com">neversee.extension@gmail.com</a>
+      </p>
+    </section>
+  </main>
+</body>
+</html>

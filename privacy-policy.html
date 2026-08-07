@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — NeverSee</title>
+  <meta name="description" content="Privacy Policy for the NeverSee browser extension.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --text: #1f2937;
+      --muted: #4b5563;
+      --border: #d1d5db;
+      --bg: #ffffff;
+      --code-bg: #f3f4f6;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #f3f4f6;
+        --muted: #d1d5db;
+        --border: #374151;
+        --bg: #111827;
+        --code-bg: #1f2937;
+      }
+    }
+    body {
+      margin: 0 auto;
+      max-width: 52rem;
+      padding: 2rem 1.25rem 3rem;
+      font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+    h1, h2, h3 { line-height: 1.25; }
+    h1 { margin-top: 0; }
+    h2 { margin-top: 2.5rem; border-top: 1px solid var(--border); padding-top: 1.5rem; }
+    p, li { color: var(--text); }
+    .meta, .note { color: var(--muted); }
+    .lang-nav {
+      display: flex;
+      gap: 1rem;
+      margin: 1rem 0 2rem;
+      padding: 0;
+      list-style: none;
+    }
+    .lang-nav a { color: inherit; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.55rem 0.65rem;
+      vertical-align: top;
+      text-align: left;
+    }
+    th { background: var(--code-bg); }
+    code {
+      background: var(--code-bg);
+      padding: 0.1rem 0.35rem;
+      border-radius: 0.25rem;
+      font-size: 0.92em;
+    }
+    a { color: #2563eb; }
+    @media (prefers-color-scheme: dark) {
+      a { color: #93c5fd; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Privacy Policy — NeverSee</h1>
+    <p class="meta">
+      <strong>Effective date:</strong> August 7, 2026<br>
+      <strong>Extension name:</strong> NeverSee<br>
+      <strong>Version:</strong> 1.0.0
+    </p>
+    <p class="note">
+      <a href="index.html">NeverSee public site</a>
+    </p>
+    <ul class="lang-nav">
+      <li><a href="#english">English</a></li>
+      <li><a href="#japanese">日本語</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <section id="english" lang="en">
+      <h2>English</h2>
+
+      <h3>Single purpose</h3>
+      <p>NeverSee has one purpose: <strong>to hide links, listings, and other page items that you choose not to see again</strong>, and to keep those choices on your device so they stay hidden on future visits until you restore or remove them.</p>
+
+      <h3>Summary</h3>
+      <p>NeverSee processes page information <strong>on your device</strong> to provide hiding features. The developer <strong>does not operate a server that collects your browsing data</strong>, and NeverSee <strong>does not send your hidden-item data to the developer or to third parties</strong> for analytics, advertising, or sale.</p>
+      <p>This is different from saying the extension reads nothing. To show hide controls and apply your saved choices, NeverSee reads relevant parts of supported web pages and stores the resulting keys and display metadata locally.</p>
+
+      <h3>Data stored on your device</h3>
+      <p>NeverSee stores data locally using <code>chrome.storage.local</code>. It <strong>does not use</strong> <code>chrome.storage.sync</code> or other cross-device sync provided by the browser.</p>
+      <table>
+        <thead>
+          <tr><th>Stored item</th><th>Examples</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Hidden item keys</td><td>Normalized URLs, site-specific IDs</td><td>Remember what you chose to hide</td></tr>
+          <tr><td>Hidden item metadata</td><td>Source site, title, registration time</td><td>Display entries in Hidden Library</td></tr>
+          <tr><td>Always Visible list</td><td>Same kinds of keys as hidden items</td><td>Keep specific items visible</td></tr>
+          <tr><td>Settings</td><td>Hide on/off preference</td><td>Control whether hiding is active</td></tr>
+        </tbody>
+      </table>
+      <p>Implementation storage keys include <code>rb.hiddenUrls.v1</code>, <code>rb.hiddenMetadata.v1</code>, <code>rb.alwaysVisibleUrls.v1</code>, <code>rb.hidingEnabled.v1</code>, and <code>rb.storageSchemaVersion</code>.</p>
+
+      <h3>Page processing (local only)</h3>
+      <ul>
+        <li><strong>HOMES (homes.co.jp):</strong> Processes property identification on the page and reads same-origin map tile responses to sync map markers with hidden cards. Not sent to the developer.</li>
+        <li><strong>Zillow and similar sites:</strong> Processes card and map marker identification so hiding applies consistently.</li>
+        <li><strong>Other supported sites:</strong> Reads links and nearby listing content needed for hide targets and titles.</li>
+      </ul>
+
+      <h3>JSON backup and restore</h3>
+      <p>From Options, you can export and import a JSON backup on your device. Backups may include hidden keys, Always Visible keys, Hidden Library metadata, and the hide on/off setting. NeverSee does not upload backup files to the developer.</p>
+
+      <h3>What the developer does not do</h3>
+      <ul>
+        <li>Send hidden-item data or page content to developer-operated servers</li>
+        <li>Use analytics, advertising, or tracking services</li>
+        <li>Sell or share your data with third parties</li>
+        <li>Intentionally collect personal information such as name, email, or account credentials</li>
+      </ul>
+
+      <h3>Permissions</h3>
+      <table>
+        <thead>
+          <tr><th>Permission</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>storage</code></td><td>Save hidden items, metadata, Always Visible entries, and settings on your device</td></tr>
+          <tr><td><code>activeTab</code></td><td>Read the current tab URL when you register the current page from the popup</td></tr>
+          <tr><td><code>contextMenus</code></td><td>Add a right-click menu item to hide a link</td></tr>
+          <tr><td><code>http://*/*</code>, <code>https://*/*</code></td><td>Run content scripts so hide controls and saved rules can work on web pages</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Data retention and deletion</h3>
+      <p>In <strong>Options</strong>, you can restore or delete individual hidden items, remove Always Visible exceptions, delete registered URLs (including clear all), and export or import JSON backups.</p>
+      <p><strong>Uninstalling</strong> NeverSee or clearing browser/extension data may permanently delete locally stored data. Export a backup first if you want to keep a copy.</p>
+
+      <h3>Children</h3>
+      <p>NeverSee is not directed at children under 13.</p>
+
+      <h3>Changes to this policy</h3>
+      <p>Updates will be published on the public site and referenced from the Chrome Web Store listing and release notes when applicable. The effective date will be updated.</p>
+
+      <h3>Contact</h3>
+      <p>For privacy or support questions about NeverSee:</p>
+      <p><a href="mailto:neversee.extension@gmail.com">neversee.extension@gmail.com</a></p>
+    </section>
+
+    <section id="japanese" lang="ja">
+      <h2>日本語</h2>
+
+      <h3>単一目的</h3>
+      <p>NeverSee の目的は <strong>1 つ</strong>です。<strong>ユーザーが「見ない」と選んだリンク・物件・商品などの表示を非表示にし、その選択を端末内に保存して、復元または削除するまで今後の閲覧でも非表示を維持すること</strong>です。</p>
+
+      <h3>概要</h3>
+      <p>NeverSee は非表示機能を提供するために、<strong>お使いの端末上で</strong> Web ページの情報を処理します。開発者が閲覧データを収集するサーバーを運用しておらず、NeverSee は <strong>非表示データを開発者や第三者へ analytics・広告・販売目的で送信しません</strong>。</p>
+      <p>「何も読み取らない」という意味ではありません。非表示ボタンの表示や保存済み設定の適用のため、対応サイトのページ上の関連情報を読み取り、結果として得られたキーと表示用メタデータを端末内に保存します。</p>
+
+      <h3>端末内に保存されるデータ</h3>
+      <p>NeverSee は <code>chrome.storage.local</code> を使用します。<strong><code>chrome.storage.sync</code> は使用しません</strong>。</p>
+      <table>
+        <thead>
+          <tr><th>保存内容</th><th>例</th><th>目的</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>非表示キー</td><td>正規化 URL、サイト固有 ID</td><td>非表示にした項目を記憶</td></tr>
+          <tr><td>非表示メタデータ</td><td>提供元、タイトル、登録日時</td><td>非表示ライブラリの表示</td></tr>
+          <tr><td>常に表示リスト</td><td>非表示キーと同種のキー</td><td>特定項目を表示し続ける</td></tr>
+          <tr><td>設定</td><td>非表示 ON/OFF</td><td>非表示機能の有効/無効</td></tr>
+        </tbody>
+      </table>
+
+      <h3>ページ処理（端末内のみ）</h3>
+      <ul>
+        <li><strong>HOMES:</strong> 物件識別情報と同一オリジンの地図タイルレスポンスを処理し、地図マーカーとカードの非表示を一致させます。開発者サーバーへは送信されません。</li>
+        <li><strong>Zillow 等:</strong> カードと地図マーカーの識別情報を処理します。</li>
+        <li><strong>その他対応サイト:</strong> 非表示対象とタイトル表示に必要なリンクおよび周辺内容を読み取ります。</li>
+      </ul>
+
+      <h3>JSON バックアップ</h3>
+      <p>Options から JSON を端末へ書き出し、後から復元できます。開発者サーバーへのアップロードは行いません。</p>
+
+      <h3>開発者が行わないこと</h3>
+      <ul>
+        <li>非表示データやページ内容を開発者運営サーバーへ送信する</li>
+        <li>analytics、広告、トラッキングを使用する</li>
+        <li>データを販売または第三者と共有する</li>
+        <li>氏名、メールアドレス、認証情報などを意図的に収集する</li>
+      </ul>
+
+      <h3>権限</h3>
+      <table>
+        <thead>
+          <tr><th>権限</th><th>目的</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>storage</code></td><td>非表示項目、メタデータ、常に表示、設定を端末内に保存</td></tr>
+          <tr><td><code>activeTab</code></td><td>Popup から現在タブ URL を読み取る</td></tr>
+          <tr><td><code>contextMenus</code></td><td>右クリックメニューから非表示登録</td></tr>
+          <tr><td><code>http://*/*</code>, <code>https://*/*</code></td><td>Web ページ上で非表示 UI と保存済みルールを動作させる</td></tr>
+        </tbody>
+      </table>
+
+      <h3>データの保持と削除</h3>
+      <p>Options で個別削除、全削除、復元、JSON バックアップの書き出し/復元ができます。拡張機能のアンインストールやブラウザデータ消去により、端末内データが永久に失われる場合があります。</p>
+
+      <h3>子ども向けサービス</h3>
+      <p>13 歳未満の子どもを対象としていません。</p>
+
+      <h3>ポリシーの変更</h3>
+      <p>更新版を公開サイトに掲載し、必要に応じて Chrome Web Store から参照します。</p>
+
+      <h3>お問い合わせ</h3>
+      <p>NeverSee のプライバシーまたはサポートに関するお問い合わせ:</p>
+      <p><a href="mailto:neversee.extension@gmail.com">neversee.extension@gmail.com</a></p>
+    </section>
+  </main>
+</body>
+</html>
