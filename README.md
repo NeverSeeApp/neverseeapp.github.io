@@ -1,6 +1,6 @@
 # NeverSee — Public Site
 
-Official public information and privacy policy for NeverSee.
+Official public information and privacy policy for NeverSee. **Currently offered as a free public beta.**
 
 ## URLs
 
